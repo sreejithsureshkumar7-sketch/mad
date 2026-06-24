@@ -1,0 +1,1 @@
+self.addEventListener("install",()=>{console.log("Madha Attendance Pro installed");});

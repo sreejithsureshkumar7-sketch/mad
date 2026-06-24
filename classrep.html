@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Class Rep Panel</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/style.css"></head>
+<body onload="classRepGuard();setToday();loadAttendanceStudents();"><header><div><h2>Madha Arts and Science College</h2><p>Class Rep Attendance Panel</p></div><a href="index.html">Logout</a></header>
+<main class="container"><section class="card"><h2>Select Department & Year</h2><div class="filter-grid">
+<select id="attendanceDepartment" onchange="loadAttendanceStudents()"><option value="">Select Department</option>
+<option>B.Sc Computer Science</option><option>BCA</option><option>B.Com</option><option>BBA</option>
+<option>B.Sc Maths</option><option>B.Sc Physics</option><option>B.Sc Chemistry</option><option>BA English</option></select><select id="attendanceYear" onchange="loadAttendanceStudents()"><option value="">Select Year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option></select><input type="date" id="attendanceDate"></div></section>
+<section class="card"><h2>Mark Attendance</h2><div class="table-wrap"><table><thead><tr><th>Name</th><th>Reg No</th><th>Department</th><th>Year</th><th>Present</th><th>Absent</th></tr></thead><tbody id="attendanceStudents"></tbody></table></div><button onclick="saveAttendance()">Save Attendance</button></section></main><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script></body></html>
